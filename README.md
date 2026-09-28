@@ -303,6 +303,6 @@ Future improvements may include:
 
 ## Author
 
-**May Phu**
+**May Phu Aung**
 
 This project was developed as part of my portfolio and internship preparation to demonstrate full-stack web development, PHP/MySQL development, database design, authentication, CRUD operations, and responsive UI development.
