@@ -269,39 +269,35 @@ Future improvements may include:
 
 ## Screenshots
 
-Screenshots of the application will be added here.
-
 ### Home
-
-*Add screenshot here.*
+![TripWise Home](screenshots/home.png)
 
 ### Destinations
-
-*Add screenshot here.*
+![TripWise Destinations](screenshots/destinations.png)
 
 ### Destination Details
+![TripWise Destination Details](screenshots/destination-details.png)
 
-*Add screenshot here.*
+### Dashboard
+![TripWise Dashboard](screenshots/dashboard.png)
 
-### User Dashboard
-
-*Add screenshot here.*
+### Create Trip
+![TripWise Create Trip](screenshots/create-trip.png)
 
 ### Itinerary
-
-*Add screenshot here.*
+![TripWise Itinerary](screenshots/itinerary.png)
 
 ### Budget
+![TripWise Budget](screenshots/budget.png)
 
-*Add screenshot here.*
+### Saved Places
+![TripWise Saved Places](screenshots/saved-places.png)
 
 ### Admin Dashboard
-
-*Add screenshot here.*
+![TripWise Admin Dashboard](screenshots/admin-dashboard.png)
 
 ### Admin Places
-
-*Add screenshot here.*
+![TripWise Admin Places](screenshots/admin-places.png)
 
 ---
 
