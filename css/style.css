@@ -1,0 +1,5547 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+
+/* Navigation */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 8%;
+
+    background-color: white;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #0077ff;
+}
+
+
+/* Hero */
+
+.hero {
+    min-height: 500px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)
+        ),
+        url("../images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+.hero-content {
+    max-width: 700px;
+    padding: 30px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+
+/* Button */
+
+.btn {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    background-color: #0077ff;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #005fcc;
+}
+
+
+/* Destinations */
+
+.destinations {
+    padding: 70px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #666;
+}
+
+
+/* Destination Cards */
+
+.destination-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 25px;
+}
+
+.destination-card {
+    background-color: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 200px;
+
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin-bottom: 8px;
+}
+
+.card-content p {
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.category {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    background-color: #eef5ff;
+
+    color: #0077ff;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    background-color: #222;
+
+    color: white;
+
+    margin-top:
+     50px;
+}
+/* Destination Details */
+
+.destination-detail-hero {
+    position: relative;
+
+    height: 450px;
+
+    overflow: hidden;
+}
+
+.destination-detail-hero img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.destination-detail-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        );
+}
+
+.destination-detail-overlay h1 {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.destination-detail-overlay p {
+    font-size: 22px;
+}
+
+
+/* Destination Information */
+
+.destination-info {
+    padding: 60px 8%;
+}
+
+.destination-main {
+    max-width: 900px;
+    margin: auto;
+}
+
+.destination-main h2 {
+    font-size: 34px;
+    margin: 20px 0;
+}
+
+.description {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+}
+
+
+.daily-cost {
+    margin: 30px 0;
+    padding: 20px;
+
+    background-color: #f5f8ff;
+
+    border-radius: 10px;
+}
+
+.daily-cost strong {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.daily-cost p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/* Places */
+
+.places-section {
+    padding: 60px 8%;
+    background-color: #f8f9fa;
+}
+
+.places-section .destination-card {
+    min-height: 250px;
+}
+
+.places-section .card-content p {
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+/* Authentication */
+
+.auth-container {
+    min-height: 70vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 60px 20px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 450px;
+
+    background-color: white;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.auth-card h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.auth-subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #0077ff;
+}
+
+.form-group small {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #777;
+}
+
+.auth-button {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #0077ff;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.auth-button:hover {
+    background-color: #005fcc;
+}
+
+.error-box {
+    margin-bottom: 20px;
+
+    padding: 15px;
+
+    background-color: #ffecec;
+
+    border: 1px solid #ffb3b3;
+
+    border-radius: 8px;
+
+    color: #c62828;
+}
+
+.error-box p {
+    margin: 5px 0;
+}
+
+.auth-footer {
+    text-align: center;
+
+    margin-top: 25px;
+
+    color: #666;
+}
+
+.auth-footer a {
+    color: #0077ff;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+.success-box {
+    margin-bottom: 20px;
+
+    padding: 15px;
+
+    background-color: #e8f8ee;
+
+    border: 1px solid #a8dfba;
+
+    border-radius: 8px;
+
+    color: #287a3d;
+}
+/* Dashboard */
+
+.dashboard {
+    padding: 70px 8%;
+    min-height: 65vh;
+}
+
+.dashboard h1 {
+    margin-bottom: 10px;
+}
+
+.dashboard > p {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.dashboard-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 25px;
+}
+
+.dashboard-card {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-card h2 {
+    margin-bottom: 10px;
+}
+
+.dashboard-card p {
+    color: #666;
+
+    margin-bottom: 20px;
+}
+/* =========================
+   CREATE TRIP
+========================= */
+
+.create-trip-page {
+    padding: 70px 8%;
+    min-height: 70vh;
+}
+
+.form-container {
+    max-width: 650px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.form-container h1 {
+    margin-bottom: 10px;
+}
+
+.form-subtitle {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #777;
+}
+
+.back-link {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: #555;
+    text-decoration: none;
+}
+
+
+/* =========================
+   MY TRIPS
+========================= */
+
+.my-trips-page {
+    padding: 70px 8%;
+    min-height: 70vh;
+}
+
+.page-header {
+    margin-bottom: 25px;
+}
+
+.page-header h1 {
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    color: #666;
+}
+
+.trip-actions {
+    margin-bottom: 30px;
+}
+
+.trips-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(280px, 1fr)
+    );
+    gap: 25px;
+}
+
+.trip-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.trip-card h2 {
+    margin-bottom: 10px;
+}
+
+.trip-destination {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.trip-info {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+    margin-bottom: 20px;
+}
+
+.trip-info p {
+    margin-bottom: 8px;
+}
+
+.trip-info p:last-child {
+    margin-bottom: 0;
+}
+
+.trip-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.secondary-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #f3f3f3;
+    color: #333;
+    text-decoration: none;
+    border-radius: 7px;
+    transition: 0.2s;
+}
+
+.secondary-button:hover {
+    background-color: #e5e5e5;
+}
+
+.no-trips {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: white;
+    border-radius: 12px;
+}
+
+.no-trips h2 {
+    margin-bottom: 10px;
+}
+
+.no-trips p {
+    color: #666;
+    margin-bottom: 20px;
+}
+/* =========================
+   ITINERARY
+========================= */
+
+.itinerary-page {
+    padding: 60px 8%;
+    min-height: 70vh;
+}
+
+.itinerary-header {
+    margin-bottom: 35px;
+}
+
+.itinerary-header h1 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.itinerary-header p {
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.itinerary-layout {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 35px;
+    align-items: start;
+}
+
+.itinerary-form-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.itinerary-form-card h2 {
+    margin-bottom: 8px;
+}
+
+.itinerary-form-card textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.itinerary-list h2 {
+    margin-bottom: 20px;
+}
+
+.itinerary-item {
+    display: flex;
+    gap: 20px;
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.itinerary-date {
+    min-width: 120px;
+    font-weight: 600;
+}
+
+.itinerary-content {
+    flex: 1;
+}
+
+.itinerary-content h3 {
+    margin-bottom: 8px;
+}
+
+.itinerary-category {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #f3f3f3;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.itinerary-time {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.itinerary-notes {
+    color: #666;
+    line-height: 1.6;
+}
+
+.no-itinerary {
+    background-color: white;
+    padding: 50px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.no-itinerary h3 {
+    margin-bottom: 10px;
+}
+
+.no-itinerary p {
+    color: #666;
+}
+
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    .itinerary-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .itinerary-item {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .itinerary-date {
+        min-width: auto;
+    }
+
+}
+/* =========================
+   BUDGET
+========================= */
+
+.budget-page {
+    padding: 60px 8%;
+    min-height: 70vh;
+}
+
+.budget-header {
+    margin-bottom: 35px;
+}
+
+.budget-header h1 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.budget-header p {
+    color: #666;
+}
+
+
+/* Budget Summary */
+
+.budget-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.budget-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.budget-label {
+    display: block;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.budget-card strong {
+    font-size: 24px;
+}
+
+
+/* Budget Layout */
+
+.budget-layout {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 35px;
+    align-items: start;
+}
+
+
+/* Expense Form */
+
+.expense-form-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.expense-form-card h2 {
+    margin-bottom: 8px;
+}
+
+
+/* Expense List */
+
+.expense-list h2 {
+    margin-bottom: 20px;
+}
+
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    background-color: white;
+    padding: 20px;
+
+    margin-bottom: 15px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.expense-main h3 {
+    margin-bottom: 8px;
+}
+
+.expense-category {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    background-color: #f3f3f3;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    margin-bottom: 8px;
+}
+
+.expense-date {
+    color: #777;
+    font-size: 14px;
+}
+
+.expense-amount {
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+
+/* No Expenses */
+
+.no-expenses {
+    background-color: white;
+    padding: 50px;
+    text-align: center;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.no-expenses h3 {
+    margin-bottom: 10px;
+}
+
+.no-expenses p {
+    color: #666;
+}
+
+
+/* Category Breakdown */
+
+.category-breakdown {
+    margin-top: 45px;
+}
+
+.category-breakdown h2 {
+    margin-bottom: 20px;
+}
+
+.category-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(180px, 1fr));
+
+    gap: 15px;
+}
+
+.category-card {
+    background-color: white;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.category-card span {
+    display: block;
+
+    color: #666;
+
+    margin-bottom: 8px;
+}
+
+.category-card strong {
+    font-size: 18px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    .budget-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .budget-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .expense-item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+}
+/* =========================
+   SAVED PLACES
+========================= */
+
+.saved-places-page {
+    padding: 70px 8%;
+    min-height: 70vh;
+}
+
+.saved-places-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 25px;
+}
+
+.saved-place-card {
+    background-color: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.saved-place-image {
+    width: 100%;
+    height: 200px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.saved-place-content {
+    padding: 25px;
+}
+
+.saved-place-category {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    background-color: #f3f3f3;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    margin-bottom: 12px;
+}
+
+.saved-place-content h2 {
+    margin-bottom: 8px;
+}
+
+.saved-place-destination {
+    color: #666;
+
+    margin-bottom: 15px;
+}
+
+.saved-place-description {
+    color: #666;
+
+    line-height: 1.6;
+
+    margin-bottom: 15px;
+}
+
+.saved-place-address {
+    color: #777;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+.saved-place-buttons {
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+.remove-button {
+    display: inline-block;
+
+    padding: 10px 15px;
+
+    background-color: #f8eeee;
+
+    color: #a33;
+
+    text-decoration: none;
+
+    border-radius: 7px;
+
+    transition: 0.2s;
+}
+
+.remove-button:hover {
+    background-color: #f1dada;
+}
+
+.no-saved-places {
+    text-align: center;
+
+    background-color: white;
+
+    padding: 60px 20px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.no-saved-places h2 {
+    margin-bottom: 10px;
+}
+
+.no-saved-places p {
+    color: #666;
+
+    margin-bottom: 25px;
+}
+/* =========================
+   DESTINATION DETAILS
+========================= */
+
+.destination-details-page {
+    padding: 60px 8%;
+    min-height: 70vh;
+}
+
+.destination-detail-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+.destination-detail-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.destination-detail-content h1 {
+    font-size: 42px;
+    margin: 12px 0;
+}
+
+.destination-category {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #f3f3f3;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+.destination-country {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.destination-description {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.destination-cost {
+    margin-bottom: 25px;
+}
+
+.destination-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+
+/* Places */
+
+.places-section {
+    margin-top: 30px;
+}
+
+.section-header {
+    margin-bottom: 30px;
+}
+
+.section-header h2 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.section-header p {
+    color: #666;
+}
+
+.places-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(280px, 1fr)
+    );
+    gap: 25px;
+}
+
+.place-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.place-image {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+}
+
+.place-card-content {
+    padding: 25px;
+}
+
+.place-category {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #f3f3f3;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.place-card h3 {
+    margin-bottom: 10px;
+}
+
+.place-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.place-address {
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+.place-actions {
+    margin-top: 20px;
+}
+
+.no-places {
+    background-color: white;
+    padding: 50px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.no-places h3 {
+    margin-bottom: 10px;
+}
+
+.no-places p {
+    color: #666;
+}
+
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    .destination-detail-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .destination-detail-image {
+        height: 280px;
+    }
+
+    .destination-detail-content h1 {
+        font-size: 32px;
+    }
+
+}
+
+/* =========================
+   ADMIN DASHBOARD
+========================= */
+
+.admin-page {
+    padding: 70px 8%;
+    min-height: 70vh;
+}
+
+.admin-header {
+    margin-bottom: 40px;
+}
+
+.admin-header h1 {
+    margin-bottom: 10px;
+}
+
+.admin-header p {
+    color: #666;
+}
+
+
+/* Statistics */
+
+.admin-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.admin-stat-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.admin-stat-card h2 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.admin-stat-card p {
+    color: #666;
+}
+
+
+/* Management */
+
+.admin-management h2 {
+    margin-bottom: 25px;
+}
+
+.admin-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.admin-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.admin-card h3 {
+    margin-bottom: 10px;
+}
+
+.admin-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+
+    .admin-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .admin-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .admin-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================
+   ADMIN DESTINATIONS
+========================= */
+
+.admin-table-container {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    overflow-x: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.admin-table th {
+    font-weight: 600;
+    background-color: #f8f8f8;
+}
+
+.admin-table-image {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.admin-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.edit-button,
+.delete-button {
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.edit-button {
+    background-color: #eee;
+    color: #333;
+}
+
+.delete-button {
+    background-color: #ffe5e5;
+    color: #c0392b;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+    opacity: 0.8;
+}
+
+.back-admin {
+    margin-top: 30px;
+}
+/* =========================
+   ADMIN USERS
+========================= */
+
+.role-form {
+    margin: 0;
+}
+
+.role-form select {
+    padding: 7px 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.admin-table td small {
+    color: #777;
+    margin-left: 4px;
+}
+/* =========================================
+   Destinations Page
+========================================= */
+
+.destinations-page {
+    padding: 70px 8%;
+    min-height: 70vh;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-header h1 {
+    margin-bottom: 12px;
+}
+
+.page-header p {
+    color: #666;
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+
+/* Filters */
+
+.destination-filters {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 45px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.filter-form {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    gap: 15px;
+    align-items: end;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.filter-group label {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.filter-group input,
+.filter-group select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.filter-group input:focus,
+.filter-group select:focus {
+    outline: none;
+    border-color: #999;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+
+/* Results */
+
+.destinations-section {
+    margin-top: 30px;
+}
+
+.section-header {
+    margin-bottom: 25px;
+}
+
+.section-header h2 {
+    font-size: 24px;
+}
+
+
+/* Destination Grid */
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.destination-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-4px);
+}
+
+.destination-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.placeholder-image {
+    background-color: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+}
+
+.destination-content {
+    padding: 22px;
+}
+
+.destination-category {
+    font-size: 13px;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.destination-content h3 {
+    margin: 8px 0 5px;
+    font-size: 22px;
+}
+
+.destination-country {
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.destination-description {
+    color: #666;
+    line-height: 1.6;
+    min-height: 76px;
+}
+
+.destination-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.destination-cost {
+    font-size: 14px;
+    color: #555;
+}
+
+
+/* No Results */
+
+.no-results {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.no-results h3 {
+    margin-bottom: 10px;
+}
+
+.no-results p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+
+    .filter-form {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .filter-buttons {
+        grid-column: span 2;
+    }
+
+    .destination-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .destinations-page {
+        padding: 50px 5%;
+    }
+
+    .filter-form {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-buttons {
+        grid-column: auto;
+    }
+
+    .destination-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .destination-card-footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+}
+/* =========================================
+   Destination Details
+========================================= */
+
+.destination-details-page {
+    min-height: 70vh;
+}
+
+
+/* Destination Hero */
+
+.destination-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 500px;
+    background-color: white;
+}
+
+.destination-hero-image {
+    width: 100%;
+    min-height: 500px;
+}
+
+.destination-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.destination-hero-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    background-color: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+}
+
+.destination-hero-content {
+    padding: 70px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.destination-hero-content h1 {
+    font-size: 42px;
+    margin: 10px 0;
+}
+
+.destination-hero-content .destination-country {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.destination-hero-content .destination-description {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.destination-price {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 25px;
+}
+
+.destination-price span {
+    color: #777;
+    font-size: 14px;
+}
+
+.destination-price strong {
+    font-size: 24px;
+}
+
+.destination-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+/* Places */
+
+.destination-places {
+    padding: 70px 8%;
+}
+
+.destination-places .section-header {
+    text-align: left;
+    margin-bottom: 35px;
+}
+
+.destination-places .section-header p {
+    color: #666;
+    max-width: 700px;
+    line-height: 1.7;
+}
+
+.places-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.place-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.place-image {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+}
+
+.place-placeholder {
+    background-color: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+}
+
+.place-content {
+    padding: 22px;
+}
+
+.place-category {
+    font-size: 13px;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.place-content h3 {
+    margin: 8px 0 12px;
+    font-size: 21px;
+}
+
+.place-content p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.place-address {
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+.place-actions {
+    margin-top: 20px;
+}
+
+.no-places {
+    text-align: center;
+    background-color: white;
+    padding: 50px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.no-places p {
+    color: #666;
+}
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+
+    .destination-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .destination-hero-image {
+        min-height: 350px;
+    }
+
+    .destination-hero-placeholder {
+        min-height: 350px;
+    }
+
+    .destination-hero-content {
+        padding: 50px 8%;
+    }
+
+    .destination-hero-content h1 {
+        font-size: 34px;
+    }
+
+    .places-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .places-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .destination-hero-content {
+        padding: 40px 5%;
+    }
+
+    .destination-places {
+        padding: 50px 5%;
+    }
+
+}
+/* =========================
+   HOME PAGE
+========================= */
+
+.hero {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    padding: 80px 8%;
+    background:
+        linear-gradient(
+            rgba(255, 255, 255, 0.88),
+            rgba(255, 255, 255, 0.88)
+        ),
+        url("../images/tokyo.jpg") center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero-tagline {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    font-weight: 700;
+}
+
+.hero-description {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+
+/* FEATURES */
+
+.features-section {
+    padding: 80px 8%;
+    background-color: #fafafa;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-header h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.section-header p {
+    color: #666;
+    line-height: 1.7;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.feature-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.feature-icon {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+
+/* FEATURED DESTINATIONS */
+
+.featured-section {
+    padding: 80px 8%;
+}
+
+.view-all-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+/* CTA */
+
+.cta-section {
+    padding: 80px 8%;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.cta-content p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .hero {
+        min-height: 500px;
+        padding: 60px 5%;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .features-section,
+    .featured-section,
+    .cta-section {
+        padding: 60px 5%;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    z-index: 100;
+}
+
+.nav-container {
+    width: 84%;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    min-height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.logo {
+    text-decoration: none;
+    color: #111;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #444;
+    font-size: 14px;
+    font-weight: 500;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #111;
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.primary-button,
+.secondary-button,
+.delete-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 18px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.primary-button {
+    background-color: #111;
+    color: white;
+    border: 1px solid #111;
+}
+
+.secondary-button {
+    background-color: white;
+    color: #111;
+    border: 1px solid #ccc;
+}
+
+.delete-button {
+    background-color: #fff;
+    color: #b00020;
+    border: 1px solid #e0b5bb;
+}
+
+.primary-button:hover,
+.secondary-button:hover,
+.delete-button:hover {
+    transform: translateY(-2px);
+    opacity: 0.85;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    padding: 30px 8%;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f8f8;
+    color: #222;
+}
+
+a {
+    color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+
+/* =========================
+   MOBILE NAVIGATION
+========================= */
+
+@media (max-width: 800px) {
+
+    .nav-container {
+        width: 90%;
+        padding: 15px 0;
+
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        width: 100%;
+
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+}
+/* =========================================
+   DASHBOARD
+========================================= */
+
+.dashboard-page {
+    width: 84%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 0 80px;
+}
+
+
+/* Dashboard Header */
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.dashboard-label {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #777;
+    margin-bottom: 12px;
+}
+
+.dashboard-header h1 {
+    font-size: 38px;
+    margin: 0 0 12px;
+}
+
+.dashboard-header p:not(.dashboard-label) {
+    color: #666;
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* Statistics */
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.dashboard-stat-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.dashboard-stat-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.dashboard-stat-card span {
+    display: block;
+    color: #777;
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+.dashboard-stat-card strong {
+    display: block;
+    font-size: 23px;
+    color: #111;
+}
+
+
+/* Dashboard Content */
+
+.dashboard-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+.dashboard-main-card,
+.dashboard-side-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 30px;
+}
+
+.dashboard-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.dashboard-card-header h2,
+.dashboard-side-card h2 {
+    margin: 0 0 8px;
+    font-size: 23px;
+}
+
+.dashboard-card-header p,
+.dashboard-side-card > p {
+    margin: 0;
+    color: #777;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.dashboard-card-header > a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: #111;
+}
+
+
+/* Trip List */
+
+.dashboard-trips-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.dashboard-trip {
+    display: grid;
+    grid-template-columns: 90px 1fr auto;
+    align-items: center;
+    gap: 18px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+}
+
+.dashboard-trip-image {
+    width: 90px;
+    height: 75px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.dashboard-trip-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dashboard-trip-info h3 {
+    margin: 0 0 5px;
+    font-size: 17px;
+}
+
+.dashboard-trip-destination {
+    margin: 0 0 5px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.dashboard-trip-date {
+    margin: 0;
+    color: #777;
+    font-size: 13px;
+}
+
+.dashboard-trip-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+
+/* Quick Actions */
+
+.dashboard-side-card > p {
+    margin-bottom: 25px;
+}
+
+.dashboard-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dashboard-action {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 9px;
+    text-decoration: none;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.dashboard-action:hover {
+    transform: translateY(-2px);
+    border-color: #ccc;
+}
+
+.dashboard-action > span {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    flex-shrink: 0;
+}
+
+.dashboard-action strong {
+    display: block;
+    font-size: 14px;
+    color: #111;
+    margin-bottom: 4px;
+}
+
+.dashboard-action small {
+    display: block;
+    color: #777;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+
+/* Empty State */
+
+.dashboard-empty {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.dashboard-empty-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.dashboard-empty h3 {
+    margin-bottom: 8px;
+}
+
+.dashboard-empty p {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 1100px) {
+
+    .dashboard-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dashboard-content {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .dashboard-page {
+        width: 90%;
+        padding: 40px 0 60px;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dashboard-header h1 {
+        font-size: 30px;
+    }
+
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-trip {
+        grid-template-columns: 70px 1fr;
+    }
+
+    .dashboard-trip-image {
+        width: 70px;
+        height: 65px;
+    }
+
+    .dashboard-trip-actions {
+        grid-column: 1 / -1;
+    }
+
+}
+/* =========================================
+   MY TRIPS
+========================================= */
+
+.my-trips-page {
+    width: 84%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 0 80px;
+}
+
+
+/* Header */
+
+.my-trips-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 35px;
+}
+
+.page-label {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #777;
+    margin-bottom: 12px;
+}
+
+.my-trips-header h1 {
+    font-size: 40px;
+    margin: 0 0 12px;
+}
+
+.my-trips-header > div > p:last-child {
+    color: #666;
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* Trip Summary */
+
+.trip-summary {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.trip-summary strong {
+    font-size: 25px;
+}
+
+.trip-summary span {
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* Trip Grid */
+
+.my-trips-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+
+/* Trip Card */
+
+.my-trip-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.my-trip-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+
+/* Image */
+
+.my-trip-image {
+    position: relative;
+    height: 230px;
+    overflow: hidden;
+}
+
+.my-trip-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.trip-status {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 7px 12px;
+    border-radius: 20px;
+    background-color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.trip-status.upcoming {
+    color: #333;
+}
+
+.trip-status.ongoing {
+    color: #333;
+}
+
+.trip-status.completed {
+    color: #777;
+}
+
+
+/* Content */
+
+.my-trip-content {
+    padding: 25px;
+}
+
+.my-trip-country {
+    margin: 0 0 8px;
+    color: #777;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.my-trip-content h2 {
+    margin: 0 0 10px;
+    font-size: 23px;
+}
+
+.my-trip-destination {
+    margin: 0 0 22px;
+    color: #555;
+    font-size: 14px;
+}
+
+
+/* Details */
+
+.my-trip-details {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 15px;
+    padding: 18px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+.my-trip-details span {
+    display: block;
+    color: #888;
+    font-size: 11px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.my-trip-details strong {
+    display: block;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* Buttons */
+
+.my-trip-buttons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.my-trip-buttons .primary-button,
+.my-trip-buttons .secondary-button,
+.my-trip-buttons .delete-button {
+    font-size: 12px;
+    padding: 9px 13px;
+}
+
+
+/* Empty State */
+
+.my-trips-empty {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 14px;
+    text-align: center;
+    padding: 80px 25px;
+}
+
+.empty-trip-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.my-trips-empty h2 {
+    margin-bottom: 10px;
+}
+
+.my-trips-empty p {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+
+    .my-trips-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .my-trips-page {
+        width: 90%;
+        padding: 40px 0 60px;
+    }
+
+    .my-trips-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .my-trips-header h1 {
+        font-size: 32px;
+    }
+
+    .my-trip-image {
+        height: 200px;
+    }
+
+    .my-trip-details {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+}
+/* =========================================
+   CREATE TRIP
+========================================= */
+
+.create-trip-page {
+    width: 84%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0 80px;
+}
+
+
+/* Header */
+
+.create-trip-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.create-trip-header .page-label {
+    margin-bottom: 10px;
+}
+
+.create-trip-header h1 {
+    font-size: 42px;
+    margin: 0 0 12px;
+}
+
+.create-trip-header p:last-child {
+    color: #666;
+    margin: 0;
+    line-height: 1.7;
+}
+
+
+/* Main Layout */
+
+.create-trip-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+
+/* Form Card */
+
+.create-trip-form-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 14px;
+    padding: 35px;
+}
+
+
+/* Form */
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #222;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #999;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.04);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+
+/* Errors */
+
+.form-errors {
+    background-color: #fff5f5;
+    border: 1px solid #f0cccc;
+    border-radius: 8px;
+    padding: 15px 18px;
+    margin-bottom: 25px;
+    color: #8a1f1f;
+}
+
+.form-errors strong {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-errors ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.form-errors li {
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+
+/* Buttons */
+
+.create-trip-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-top: 10px;
+}
+
+
+/* Information Card */
+
+.create-trip-info {
+    background-color: #f5f5f5;
+    border-radius: 14px;
+    padding: 35px;
+}
+
+.create-trip-info-icon {
+    font-size: 40px;
+    margin-bottom: 18px;
+}
+
+.create-trip-info h2 {
+    margin: 0 0 12px;
+    font-size: 25px;
+}
+
+.create-trip-info > p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+
+/* Planning Steps */
+
+.planning-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.planning-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.planning-step > span {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.planning-step strong {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.planning-step small {
+    display: block;
+    color: #777;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* Responsive */
+
+@media (max-width: 850px) {
+
+    .create-trip-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .create-trip-page {
+        width: 90%;
+        padding: 40px 0 60px;
+    }
+
+    .create-trip-header h1 {
+        font-size: 34px;
+    }
+
+    .create-trip-form-card,
+    .create-trip-info {
+        padding: 25px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .create-trip-buttons {
+        flex-direction: column-reverse;
+    }
+
+    .create-trip-buttons a,
+    .create-trip-buttons button {
+        width: 100%;
+    }
+
+}
+/* =========================================
+   ITINERARY
+========================================= */
+
+.itinerary-page {
+    width: 84%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0 80px;
+}
+
+
+/* Header */
+
+.itinerary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 35px;
+}
+
+.itinerary-header h1 {
+    font-size: 40px;
+    margin: 0 0 10px;
+}
+
+.itinerary-header p {
+    color: #555;
+    margin: 5px 0;
+}
+
+.itinerary-dates {
+    color: #888 !important;
+    font-size: 14px;
+}
+
+.itinerary-header-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+
+/* Errors */
+
+.itinerary-errors {
+    margin-bottom: 25px;
+}
+
+
+/* Add Card */
+
+.itinerary-add-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 14px;
+    padding: 30px;
+    margin-bottom: 45px;
+}
+
+.itinerary-card-heading {
+    margin-bottom: 25px;
+}
+
+.itinerary-card-heading h2 {
+    margin: 0 0 7px;
+    font-size: 24px;
+}
+
+.itinerary-card-heading p {
+    margin: 0;
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* Form */
+
+.itinerary-form {
+    display: grid;
+    grid-template-columns: 1.5fr 1.2fr 1fr 1fr;
+    gap: 18px;
+    align-items: end;
+}
+
+.itinerary-form .form-group {
+    margin-bottom: 0;
+}
+
+.itinerary-notes-group {
+    grid-column: 1 / 4;
+}
+
+.itinerary-submit {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/* Section */
+
+.itinerary-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.itinerary-section-header h2 {
+    margin: 0 0 7px;
+    font-size: 28px;
+}
+
+.itinerary-section-header p {
+    margin: 0;
+    color: #777;
+    font-size: 14px;
+}
+
+.itinerary-count {
+    font-size: 13px;
+    color: #777;
+}
+
+
+/* Day */
+
+.itinerary-day {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.itinerary-day-header {
+    padding: 20px 25px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.day-number {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.itinerary-day-header h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.day-date {
+    font-size: 13px;
+    color: #777;
+}
+
+
+/* Items */
+
+.itinerary-items {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.itinerary-item {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 18px;
+    padding: 12px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+}
+
+.itinerary-item-image {
+    width: 90px;
+    height: 75px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.itinerary-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.itinerary-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.itinerary-item-content {
+    padding: 3px 0;
+}
+
+.itinerary-item-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.itinerary-category {
+    display: inline-block;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.itinerary-item-content h4 {
+    margin: 0;
+    font-size: 17px;
+}
+
+.itinerary-time {
+    white-space: nowrap;
+    font-size: 12px;
+    font-weight: 600;
+    color: #555;
+}
+
+.itinerary-item-notes {
+    margin: 10px 0 0;
+    color: #777;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* Empty Day */
+
+.itinerary-empty-day {
+    padding: 30px 20px;
+    text-align: center;
+    color: #888;
+}
+
+.itinerary-empty-day span {
+    display: block;
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.itinerary-empty-day p {
+    margin: 0;
+    font-size: 13px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 950px) {
+
+    .itinerary-form {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .itinerary-notes-group {
+        grid-column: 1 / -1;
+    }
+
+    .itinerary-submit {
+        grid-column: 1 / -1;
+        justify-content: flex-start;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .itinerary-page {
+        width: 90%;
+        padding: 40px 0 60px;
+    }
+
+    .itinerary-header {
+        flex-direction: column;
+    }
+
+    .itinerary-header h1 {
+        font-size: 32px;
+    }
+
+    .itinerary-form {
+        grid-template-columns: 1fr;
+    }
+
+    .itinerary-notes-group {
+        grid-column: auto;
+    }
+
+    .itinerary-submit {
+        grid-column: auto;
+    }
+
+    .itinerary-item {
+        grid-template-columns: 70px 1fr;
+    }
+
+    .itinerary-item-image {
+        width: 70px;
+        height: 65px;
+    }
+
+    .itinerary-item-top {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .itinerary-time {
+        white-space: normal;
+    }
+
+}
+/* =========================================================
+   BUDGET PAGE
+========================================================= */
+
+.budget-page {
+    width: 84%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 0 80px;
+}
+
+.budget-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.budget-header h1 {
+    margin: 8px 0 10px;
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.budget-destination {
+    margin: 0 0 6px;
+    font-size: 17px;
+    color: #444;
+}
+
+.budget-dates {
+    margin: 0;
+    color: #777;
+    font-size: 14px;
+}
+
+.budget-header-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+
+/* Warning */
+
+.budget-warning {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 20px;
+    margin-bottom: 25px;
+    background-color: #fff5f5;
+    border: 1px solid #edc7c7;
+    border-radius: 10px;
+    color: #9c2020;
+    font-size: 14px;
+}
+
+.budget-warning strong {
+    font-weight: 700;
+}
+
+
+/* Budget Overview */
+
+.budget-overview {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.budget-stat-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 14px;
+    padding: 25px;
+}
+
+.budget-stat-label {
+    display: block;
+    margin-bottom: 10px;
+    color: #777;
+    font-size: 13px;
+}
+
+.budget-stat-card strong {
+    font-size: 28px;
+    color: #111;
+}
+
+
+/* Progress */
+
+.budget-progress-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 14px;
+    padding: 28px;
+    margin-bottom: 35px;
+}
+
+.budget-progress-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.budget-progress-heading h2 {
+    margin: 6px 0 0;
+    font-size: 22px;
+}
+
+.budget-progress-heading > strong {
+    font-size: 20px;
+}
+
+.budget-progress-bar {
+    width: 100%;
+    height: 12px;
+    background-color: #eee;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.budget-progress-fill {
+    height: 100%;
+    background-color: #111;
+    border-radius: 20px;
+    transition: width 0.3s ease;
+}
+
+.budget-progress-fill.over-budget {
+    background-color: #b00020;
+}
+
+.budget-progress-text {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 10px;
+    color: #777;
+    font-size: 13px;
+}
+
+
+/* Main Budget Content */
+
+.budget-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 45px;
+}
+
+.budget-add-card,
+.budget-breakdown-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 14px;
+    padding: 30px;
+}
+
+.budget-card-heading {
+    margin-bottom: 25px;
+}
+
+.budget-card-heading .page-label {
+    margin-bottom: 7px;
+}
+
+.budget-card-heading h2 {
+    margin: 0 0 8px;
+    font-size: 23px;
+}
+
+.budget-card-heading p:last-child {
+    margin: 0;
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* Budget Form */
+
+.budget-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.budget-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.budget-form .form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+}
+
+.budget-form input,
+.budget-form select {
+    width: 100%;
+    padding: 12px 13px;
+    border: 1px solid #d8d8d8;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #222;
+    font-size: 14px;
+    outline: none;
+}
+
+.budget-form input:focus,
+.budget-form select:focus {
+    border-color: #111;
+}
+
+.budget-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.budget-submit {
+    width: fit-content;
+    border: none;
+    margin-top: 5px;
+}
+
+
+/* Errors */
+
+.budget-errors {
+    margin-bottom: 20px;
+    padding: 14px 16px;
+    background-color: #fff5f5;
+    border: 1px solid #edc7c7;
+    border-radius: 8px;
+}
+
+.budget-errors p {
+    margin: 0 0 5px;
+    color: #a00000;
+    font-size: 13px;
+}
+
+.budget-errors p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Category Breakdown */
+
+.category-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.category-item {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.category-item-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 14px;
+}
+
+.category-item-top strong {
+    font-size: 14px;
+}
+
+.category-bar {
+    width: 100%;
+    height: 7px;
+    background-color: #eee;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.category-bar-fill {
+    height: 100%;
+    background-color: #111;
+    border-radius: 20px;
+}
+
+.category-item small {
+    color: #888;
+    font-size: 11px;
+}
+
+.budget-empty-small {
+    padding: 25px 0;
+    text-align: center;
+}
+
+.budget-empty-small p {
+    margin: 0 0 5px;
+    font-weight: 600;
+}
+
+.budget-empty-small span {
+    color: #888;
+    font-size: 13px;
+}
+
+
+/* Expense History */
+
+.expense-history {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 14px;
+    padding: 30px;
+}
+
+.expense-history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.expense-history-header h2 {
+    margin: 6px 0 0;
+    font-size: 24px;
+}
+
+.expense-count {
+    color: #777;
+    font-size: 13px;
+}
+
+
+/* Expense List */
+
+.expense-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.expense-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.expense-item:first-child {
+    padding-top: 0;
+}
+
+.expense-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.expense-icon {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    color: #111;
+    font-weight: 700;
+}
+
+.expense-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.expense-main {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.expense-main h3 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.expense-category {
+    padding: 4px 8px;
+    border-radius: 20px;
+    background-color: #f3f3f3;
+    color: #666;
+    font-size: 11px;
+}
+
+.expense-date {
+    display: block;
+    margin-top: 5px;
+    color: #888;
+    font-size: 12px;
+}
+
+.expense-amount {
+    flex-shrink: 0;
+    font-size: 16px;
+}
+
+
+/* Empty Expense State */
+
+.expense-empty {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.expense-empty-icon {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.expense-empty h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+}
+
+.expense-empty p {
+    margin: 0;
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   BUDGET RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .budget-page {
+        width: 90%;
+    }
+
+    .budget-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .budget-overview {
+        grid-template-columns: 1fr;
+    }
+
+    .budget-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .budget-page {
+        padding: 40px 0 60px;
+    }
+
+    .budget-header h1 {
+        font-size: 32px;
+    }
+
+    .budget-header-actions {
+        width: 100%;
+    }
+
+    .budget-header-actions a {
+        flex: 1;
+    }
+
+    .budget-progress-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .budget-form .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .budget-add-card,
+    .budget-breakdown-card,
+    .budget-progress-card,
+    .expense-history {
+        padding: 22px;
+    }
+
+    .expense-item {
+        align-items: flex-start;
+    }
+
+    .expense-amount {
+        font-size: 14px;
+    }
+}
+/* =========================================================
+   SAVED PLACES PAGE
+========================================================= */
+
+.saved-places-page {
+    width: 84%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 65px 0 90px;
+}
+
+
+/* =========================
+   PAGE HEADER
+========================= */
+
+.saved-places-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+    margin-bottom: 35px;
+}
+
+.saved-places-header h1 {
+    margin: 8px 0 10px;
+    font-size: 40px;
+    line-height: 1.15;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+}
+
+.saved-places-intro {
+    margin: 0;
+    max-width: 650px;
+    color: #777;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.saved-places-header-actions {
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   SUMMARY
+========================= */
+
+.saved-summary {
+    margin-bottom: 35px;
+}
+
+.saved-summary-card {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #e9e9e9;
+    border-radius: 12px;
+    padding: 22px 25px;
+}
+
+.saved-summary-label {
+    display: block;
+    margin-bottom: 6px;
+    color: #888;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.saved-summary-card strong {
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 30px;
+    line-height: 1;
+}
+
+.saved-summary-text {
+    display: inline;
+    margin: 0;
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* =========================
+   SAVED PLACES GRID
+========================= */
+
+.saved-places-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+
+/* =========================
+   SAVED PLACE CARD
+========================= */
+
+.saved-place-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid #e9e9e9;
+    border-radius: 12px;
+    overflow: hidden;
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.saved-place-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, .06);
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.saved-place-image {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: #f2f2f2;
+}
+
+.saved-place-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.saved-place-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 14px;
+}
+
+
+/* CATEGORY */
+
+.saved-place-category {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+    padding: 7px 12px;
+
+    background: rgba(255, 255, 255, .95);
+    border-radius: 20px;
+
+    color: #333;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.saved-place-content {
+    padding: 23px 24px 24px;
+}
+
+.saved-place-destination {
+    margin: 0 0 8px;
+
+    color: #888;
+    font-size: 12px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+    letter-spacing: .6px;
+}
+
+.saved-place-content h2 {
+    margin: 0 0 12px;
+
+    color: #222;
+    font-size: 22px;
+    line-height: 1.3;
+}
+
+.saved-place-description {
+    margin: 0 0 13px;
+
+    color: #666;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.saved-place-address {
+    margin: 0 0 20px;
+
+    color: #888;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.saved-place-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.saved-place-actions .secondary-button,
+.saved-place-actions .delete-button {
+    flex: 1;
+}
+
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.saved-places-empty {
+    background: #fff;
+    border: 1px solid #e9e9e9;
+    border-radius: 12px;
+
+    padding: 80px 30px;
+
+    text-align: center;
+}
+
+.saved-empty-icon {
+    margin-bottom: 15px;
+
+    color: #777;
+    font-size: 45px;
+    line-height: 1;
+}
+
+.saved-places-empty h2 {
+    margin: 0 0 10px;
+    font-size: 24px;
+}
+
+.saved-places-empty p {
+    max-width: 500px;
+    margin: 0 auto 25px;
+
+    color: #777;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    .saved-places-page {
+        width: 90%;
+    }
+
+    .saved-places-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .saved-places-page {
+        width: 90%;
+        padding: 50px 0 70px;
+    }
+
+    .saved-places-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .saved-places-header h1 {
+        font-size: 34px;
+    }
+
+    .saved-places-header-actions {
+        width: 100%;
+    }
+
+    .saved-places-header-actions .primary-button {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .saved-place-image {
+        height: 210px;
+    }
+
+    .saved-place-content {
+        padding: 20px;
+    }
+
+    .saved-place-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .saved-place-actions .secondary-button,
+    .saved-place-actions .delete-button {
+        width: 100%;
+    }
+
+}
+/* =========================================================
+   ADMIN DASHBOARD
+========================================================= */
+
+.admin-page {
+    width: 84%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 65px 0 90px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.admin-header {
+    margin-bottom: 40px;
+}
+
+.admin-header h1 {
+    margin: 8px 0 10px;
+    font-size: 40px;
+    line-height: 1.15;
+    letter-spacing: -0.8px;
+}
+
+.admin-intro {
+    margin: 0;
+    max-width: 700px;
+    color: #777;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   STATISTICS
+========================= */
+
+.admin-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 55px;
+}
+
+.admin-stat-card {
+    background: #fff;
+    border: 1px solid #e9e9e9;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.admin-stat-label {
+    display: block;
+    margin-bottom: 10px;
+
+    color: #888;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.admin-stat-card strong {
+    display: block;
+    margin-bottom: 7px;
+
+    font-size: 32px;
+    line-height: 1;
+}
+
+.admin-stat-card p {
+    margin: 0;
+
+    color: #777;
+    font-size: 13px;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.admin-section {
+    margin-bottom: 55px;
+}
+
+.admin-section-header {
+    margin-bottom: 22px;
+}
+
+.admin-section-header h2 {
+    margin: 7px 0 0;
+
+    font-size: 25px;
+}
+
+
+/* =========================
+   QUICK ACTIONS
+========================= */
+
+.admin-actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.admin-action-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+
+    padding: 24px;
+
+    background: #fff;
+    border: 1px solid #e9e9e9;
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.admin-action-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, .06);
+}
+
+.admin-action-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    font-size: 18px;
+}
+
+.admin-action-card h3 {
+    margin: 2px 0 7px;
+
+    color: #222;
+    font-size: 16px;
+}
+
+.admin-action-card p {
+    margin: 0;
+
+    color: #777;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   RECENT TRIPS TABLE
+========================= */
+
+.admin-table-wrapper {
+    overflow-x: auto;
+
+    background: #fff;
+    border: 1px solid #e9e9e9;
+    border-radius: 12px;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+}
+
+.admin-table th {
+    padding: 16px 20px;
+
+    background: #fafafa;
+
+    border-bottom: 1px solid #e9e9e9;
+
+    color: #777;
+    font-size: 11px;
+    font-weight: 700;
+
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: .7px;
+}
+
+.admin-table td {
+    padding: 18px 20px;
+
+    border-bottom: 1px solid #eee;
+
+    color: #555;
+    font-size: 14px;
+}
+
+.admin-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.admin-table td strong {
+    color: #222;
+}
+
+.admin-country {
+    display: block;
+    margin-top: 4px;
+
+    color: #999;
+    font-size: 12px;
+}
+
+
+/* =========================
+   EMPTY
+========================= */
+
+.admin-empty {
+    padding: 40px;
+
+    background: #fff;
+    border: 1px solid #e9e9e9;
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+.admin-empty p {
+    margin: 0;
+
+    color: #777;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+
+    .admin-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .admin-actions {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .admin-page {
+        width: 90%;
+        padding: 50px 0 70px;
+    }
+
+    .admin-header h1 {
+        font-size: 34px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .admin-stats {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* =========================================================
+   ADMIN DESTINATIONS
+========================================================= */
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+}
+
+.admin-header-action {
+    flex-shrink: 0;
+}
+
+.admin-summary {
+    margin-bottom: 35px;
+}
+
+.admin-summary-card {
+    display: inline-block;
+
+    min-width: 220px;
+
+    padding: 22px 25px;
+
+    background: #fff;
+    border: 1px solid #e9e9e9;
+    border-radius: 12px;
+}
+
+.admin-summary-label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #888;
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.admin-summary-card strong {
+    font-size: 30px;
+}
+
+
+/* =========================
+   DESTINATION GRID
+========================= */
+
+.admin-destination-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* =========================
+   DESTINATION CARD
+========================= */
+
+.admin-destination-card {
+    overflow: hidden;
+
+    background: #fff;
+
+    border: 1px solid #e9e9e9;
+    border-radius: 12px;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.admin-destination-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 28px rgba(0, 0, 0, .06);
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.admin-destination-image {
+    position: relative;
+
+    width: 100%;
+    height: 220px;
+
+    overflow: hidden;
+
+    background: #f2f2f2;
+}
+
+.admin-destination-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.admin-destination-placeholder {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #999;
+    font-size: 14px;
+}
+
+.admin-destination-category {
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+
+    padding: 7px 12px;
+
+    background: rgba(255, 255, 255, .95);
+
+    border-radius: 20px;
+
+    color: #333;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.admin-destination-content {
+    padding: 22px;
+}
+
+.admin-destination-country {
+    margin: 0 0 7px;
+
+    color: #888;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+    letter-spacing: .6px;
+}
+
+.admin-destination-content h2 {
+    margin: 0 0 12px;
+
+    font-size: 22px;
+}
+
+.admin-destination-description {
+    margin: 0 0 18px;
+
+    color: #666;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   INFORMATION
+========================= */
+
+.admin-destination-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+
+    padding: 13px 0;
+
+    margin-bottom: 18px;
+
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   ACTIONS
+========================= */
+
+.admin-destination-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.admin-destination-actions .secondary-button,
+.admin-destination-actions .delete-button {
+    flex: 1;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+
+    .admin-destination-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .admin-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .admin-header-action {
+        width: 100%;
+    }
+
+    .admin-header-action .primary-button {
+        width: 100%;
+    }
+
+    .admin-destination-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .admin-destination-actions {
+        flex-direction: column;
+    }
+
+}
+/* =========================================================
+   ADMIN DESTINATION FORM
+========================================================= */
+
+.admin-form-page {
+    width: 84%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 65px 0 90px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.admin-form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+
+    margin-bottom: 35px;
+}
+
+.admin-form-header h1 {
+    margin: 8px 0 10px;
+
+    font-size: 40px;
+    line-height: 1.15;
+    letter-spacing: -.8px;
+}
+
+.admin-form-header p:not(.page-label) {
+    margin: 0;
+
+    color: #777;
+    font-size: 15px;
+}
+
+
+/* =========================
+   FORM CARD
+========================= */
+
+.admin-form-card {
+    background: #fff;
+
+    border: 1px solid #e9e9e9;
+    border-radius: 12px;
+
+    padding: 35px;
+}
+
+
+/* =========================
+   ERRORS
+========================= */
+
+.admin-form-errors {
+    margin-bottom: 25px;
+
+    padding: 15px 18px;
+
+    background: #fff5f5;
+
+    border: 1px solid #edcccc;
+    border-radius: 8px;
+}
+
+.admin-form-errors p {
+    margin: 0 0 6px;
+
+    color: #a00000;
+    font-size: 14px;
+}
+
+.admin-form-errors p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.admin-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.admin-form label {
+    color: #333;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.admin-form input,
+.admin-form select,
+.admin-form textarea {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    background: #fff;
+
+    border: 1px solid #d8d8d8;
+    border-radius: 8px;
+
+    color: #222;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+.admin-form input:focus,
+.admin-form select:focus,
+.admin-form textarea:focus {
+    border-color: #999;
+
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, .04);
+}
+
+.admin-form textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.admin-form small {
+    color: #888;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.admin-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+
+    padding-top: 10px;
+
+    border-top: 1px solid #eee;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    .admin-form-page {
+        width: 90%;
+        padding: 50px 0 70px;
+    }
+
+    .admin-form-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .admin-form-header h1 {
+        font-size: 34px;
+    }
+
+    .admin-form-header .secondary-button {
+        width: 100%;
+    }
+
+    .admin-form-card {
+        padding: 25px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .admin-form-actions {
+        flex-direction: column-reverse;
+    }
+
+    .admin-form-actions .primary-button,
+    .admin-form-actions .secondary-button {
+        width: 100%;
+    }
+
+}
+/* =========================================================
+   ADMIN PLACES
+========================================================= */
+
+.admin-place-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* =========================
+   PLACE CARD
+========================= */
+
+.admin-place-card {
+    overflow: hidden;
+
+    background: #fff;
+
+    border: 1px solid #e9e9e9;
+    border-radius: 12px;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.admin-place-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 28px rgba(0, 0, 0, .06);
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.admin-place-image {
+    position: relative;
+
+    width: 100%;
+    height: 220px;
+
+    overflow: hidden;
+
+    background: #f2f2f2;
+}
+
+.admin-place-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.admin-place-placeholder {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #999;
+    font-size: 14px;
+}
+
+.admin-place-category {
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+
+    padding: 7px 12px;
+
+    background: rgba(255, 255, 255, .95);
+
+    border-radius: 20px;
+
+    color: #333;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.admin-place-content {
+    padding: 22px;
+}
+
+.admin-place-destination {
+    margin: 0 0 7px;
+
+    color: #888;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+    letter-spacing: .6px;
+}
+
+.admin-place-content h2 {
+    margin: 0 0 12px;
+
+    font-size: 21px;
+    line-height: 1.3;
+}
+
+.admin-place-description {
+    margin: 0 0 14px;
+
+    color: #666;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.admin-place-address {
+    margin: 0 0 20px;
+
+    color: #888;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   ACTIONS
+========================= */
+
+.admin-place-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.admin-place-actions .secondary-button,
+.admin-place-actions .delete-button {
+    flex: 1;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+
+    .admin-place-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .admin-place-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .admin-place-actions {
+        flex-direction: column;
+    }
+
+}
+/* ================================
+   ADMIN PLACE FORM
+================================ */
+
+.admin-form-page {
+    width: 84%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 65px 0 90px;
+}
+
+.admin-form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+    margin-bottom: 35px;
+}
+
+.admin-form-header h1 {
+    margin: 8px 0 10px;
+    font-size: 40px;
+    line-height: 1.15;
+    letter-spacing: -0.8px;
+}
+
+.admin-form-intro {
+    margin: 0;
+    color: #777;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.admin-form-card {
+    background: #fff;
+    border: 1px solid #e9e9e9;
+    border-radius: 12px;
+    padding: 35px;
+}
+
+.admin-form-errors {
+    margin-bottom: 25px;
+    padding: 18px 20px;
+    background: #fff5f5;
+    border: 1px solid #edcaca;
+    border-radius: 10px;
+    color: #9b1c1c;
+}
+
+.admin-form-errors strong {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.admin-form-errors ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.admin-form-errors li {
+    margin-bottom: 4px;
+}
+
+.admin-form-errors li:last-child {
+    margin-bottom: 0;
+}
+
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 9px;
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-optional {
+    margin-left: 5px;
+    color: #999;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 13px 14px;
+    background: #fff;
+    border: 1px solid #d8d8d8;
+    border-radius: 8px;
+    color: #222;
+    font-size: 14px;
+    outline: none;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 140px;
+    line-height: 1.6;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #999;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, .04);
+}
+
+.form-help {
+    margin-top: 7px;
+    color: #888;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.admin-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.admin-form-actions .primary-button,
+.admin-form-actions .secondary-button {
+    min-width: 130px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 800px) {
+
+    .admin-form-page {
+        width: 90%;
+        padding: 45px 0 70px;
+    }
+
+    .admin-form-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .admin-form-header > div:last-child {
+        width: 100%;
+    }
+
+    .admin-form-header > div:last-child .secondary-button {
+        width: 100%;
+    }
+
+    .admin-form-card {
+        padding: 25px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .admin-form-actions {
+        flex-direction: column-reverse;
+    }
+
+    .admin-form-actions .primary-button,
+    .admin-form-actions .secondary-button {
+        width: 100%;
+    }
+
+}
+/* ================================
+   ADMIN USERS
+================================ */
+
+.admin-role {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 11px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .3px;
+}
+
+.admin-role-admin {
+    background: #f1f1f1;
+    color: #222;
+}
+
+.admin-role-user {
+    background: #fafafa;
+    color: #777;
+    border: 1px solid #e5e5e5;
+}
+
+.admin-table td strong {
+    font-weight: 600;
+}
+
+@media (max-width: 800px) {
+
+    .admin-table-wrapper {
+        overflow-x: auto;
+    }
+
+}
+ /* =========================================
+    FINAL TRIPWISE UI POLISH
+========================================= */
+
+/* Better page rendering */
+
+body {
+    min-height: 100vh;
+}
+
+
+/* Smooth card interactions */
+
+.admin-destination-card,
+.admin-place-card,
+.saved-place-card,
+.admin-stat-card,
+.admin-action-card,
+.admin-summary-card {
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        border-color .2s ease;
+}
+
+
+/* Better focus accessibility */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid #111;
+    outline-offset: 3px;
+}
+
+
+/* Prevent images from looking broken */
+
+img {
+    max-width: 100%;
+}
+
+
+/* Better empty states */
+
+.admin-empty,
+.saved-places-empty,
+.expense-empty {
+    text-align: center;
+}
+
+
+/* Consistent section spacing */
+
+.admin-section {
+    margin-top: 45px;
+}
+
+
+/* Better mobile navigation */
+
+@media (max-width: 800px) {
+
+    .nav-container {
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 12px 18px;
+    }
+
+}
+
+
+/* Small mobile screens */
+
+@media (max-width: 500px) {
+
+    .nav-container {
+        width: 92%;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .nav-links {
+        gap: 10px 14px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+}

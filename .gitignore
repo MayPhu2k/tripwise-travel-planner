@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+
+# XAMPP / local environment
+xampp/
+htdocs/
+
+# Local configuration
+.env
+
+# Temporary files
+*.tmp
+*.log
+
+# Backup files
+*.bak
+*.old
+
+# PHP generated files
+*.cache
