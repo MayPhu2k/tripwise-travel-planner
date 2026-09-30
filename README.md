@@ -160,10 +160,7 @@ Before running TripWise, install:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/tripwise-travel-planner.git
-```
-
-Replace `YOUR-USERNAME` with your GitHub username.
+git clone https://github.com/MayPhu2k/tripwise-travel-planner.git
 
 ### 2. Move the project
 
